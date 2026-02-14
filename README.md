@@ -1,7 +1,7 @@
-Name: Kiel Hedrix V. Relos
-      Arbie Ancheta
-      Marx Ervic Delima
-      Kenneth Borjal
+Name: Kiel Hedrix V. Relos,
+       ,Arbie Ancheta
+       ,Marx Ervic Delima
+       ,Kenneth Borjal
 
 Lab No: Spark RDD Pipeline 01
 
