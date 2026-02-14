@@ -1,0 +1,17 @@
+val finalOutput = {
+  sc.parallelize(Seq(
+    "ERROR: Database Connection Failed",
+    "INFO: System Heartbeat OK",
+    "ERROR: Authentication Timeout",
+    "ERROR: Database Write Conflict",
+    "ERROR: Database Connection Failed"
+  ))
+  .filter(_.startsWith("ERROR"))
+  .map(_.split(":")(1).trim)
+  .flatMap(_.split(" "))
+  .map(word => (word.toLowerCase, 1))
+  .reduceByKey(_ + _)
+  .sortBy(_._2, false)
+}
+
+finalOutput.collect().foreach(println)
